@@ -1,6 +1,6 @@
 # Ruby SDK for Klaviyo Beta API
 
-- SDK version: 1.0.0
+- SDK version: 1.0.1
 - API revision: 2022-11-14.pre
 
 ## Helpful Resources
@@ -21,15 +21,15 @@ This SDK is organized into the following resources:
 
 
 
+- DataPrivacy
+
+
+
 - Flows
 
 
 
 - Lists
-
-
-
-- Privacy
 
 
 
@@ -56,13 +56,13 @@ gem build klaviyo-api-beta-sdk.gemspec
 Then install the gem locally:
 
 ```shell
-gem install ./klaviyo-api-beta-sdk-1.0.0.gem
+gem install ./klaviyo-api-beta-sdk-1.0.1.gem
 ```
 
 
 Finally add this to the Gemfile:
 
-    gem 'klaviyo-api-beta-sdk', '~> 1.0.0'
+    gem 'klaviyo-api-beta-sdk', '~> 1.0.1'
 
 To install directly from rubygems:
 
@@ -162,6 +162,20 @@ KlaviyoBetaAPI::Catalogs.create_catalog_item(body)
 
 
 
+## DataPrivacy
+
+
+#### [Create Data Privacy Deletion Job](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/create_data_privacy_deletion_job)
+
+```ruby
+KlaviyoBetaAPI::DataPrivacy.create_data_privacy_deletion_job(body)
+```
+
+
+
+
+
+
 ## Flows
 
 
@@ -183,20 +197,6 @@ KlaviyoBetaAPI::Flows.get_flow_tags(flow_id, opts)
 
 ```ruby
 KlaviyoBetaAPI::Lists.get_list_tags(list_id, opts)
-```
-
-
-
-
-
-
-## Privacy
-
-
-#### [Create Data Privacy Deletion Job](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/create_data_privacy_deletion_job)
-
-```ruby
-KlaviyoBetaAPI::Privacy.create_data_privacy_deletion_job(body)
 ```
 
 

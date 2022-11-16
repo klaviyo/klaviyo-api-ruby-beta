@@ -211,9 +211,9 @@ require 'klaviyo-api-beta-sdk/models/v2_template_render_query_as_sub_resource'
 require 'klaviyo-api-beta-sdk/models/v2_template_render_query_as_sub_resource_attributes'
 
 # APIs
+require 'klaviyo-api-beta-sdk/api/data_privacy_api'
 require 'klaviyo-api-beta-sdk/api/flows_api'
 require 'klaviyo-api-beta-sdk/api/lists_api'
-require 'klaviyo-api-beta-sdk/api/privacy_api'
 require 'klaviyo-api-beta-sdk/api/segments_api'
 require 'klaviyo-api-beta-sdk/api/tags_api'
 

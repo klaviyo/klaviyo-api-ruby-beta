@@ -13,7 +13,7 @@ OpenAPI Generator version: 6.0.1
 require 'cgi'
 
 module KlaviyoBetaAPI
-  class DatasApi
+  class DataPrivacyApi
     attr_accessor :api_client
 
     def initialize(api_client = ApiClient.default)
@@ -36,11 +36,11 @@ module KlaviyoBetaAPI
     # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
     def create_data_privacy_deletion_job_with_http_info(data_privacy_create_deletion_job_query, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DatasApi.create_data_privacy_deletion_job ...'
+        @api_client.config.logger.debug 'Calling API: DataPrivacyApi.create_data_privacy_deletion_job ...'
       end
       # verify the required parameter 'data_privacy_create_deletion_job_query' is set
       if @api_client.config.client_side_validation && data_privacy_create_deletion_job_query.nil?
-        fail ArgumentError, "Missing the required parameter 'data_privacy_create_deletion_job_query' when calling DatasApi.create_data_privacy_deletion_job"
+        fail ArgumentError, "Missing the required parameter 'data_privacy_create_deletion_job_query' when calling DataPrivacyApi.create_data_privacy_deletion_job"
       end
       # resource path
       local_var_path = '/api/data-privacy-deletion-jobs/'
@@ -73,7 +73,7 @@ module KlaviyoBetaAPI
       auth_names = opts[:debug_auth_names] || ['Klaviyo-API-Key']
 
       new_options = opts.merge(
-        :operation => :"DatasApi.create_data_privacy_deletion_job",
+        :operation => :"DataPrivacyApi.create_data_privacy_deletion_job",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -84,7 +84,7 @@ module KlaviyoBetaAPI
 
       data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DatasApi#create_data_privacy_deletion_job\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DataPrivacyApi#create_data_privacy_deletion_job\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

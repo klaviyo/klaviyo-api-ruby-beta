@@ -467,7 +467,7 @@ module KlaviyoBetaAPI
     # Retrieve the tag with the given ID.<br><br>*Rate limits*:<br>Burst: `3/s`<br>Steady: `60/m`  **Scopes:** `Tags Read`
     # @param id [String] 
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields_tag For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sparse-fieldsets
+    # @option opts [Array<String>] :fields_tag For more information please visit https://developers.klaviyo.com/en/v2022-11-14.pre/reference/api-overview#sparse-fieldsets
     # @return [Hash<String, Object>]
     def get_tag(id, opts = {})
       data, _status_code, _headers = get_tag_with_http_info(id, opts)
@@ -478,7 +478,7 @@ module KlaviyoBetaAPI
     # Retrieve the tag with the given ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: &#x60;3/s&#x60;&lt;br&gt;Steady: &#x60;60/m&#x60;  **Scopes:** &#x60;Tags Read&#x60;
     # @param id [String] 
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields_tag For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sparse-fieldsets
+    # @option opts [Array<String>] :fields_tag For more information please visit https://developers.klaviyo.com/en/v2022-11-14.pre/reference/api-overview#sparse-fieldsets
     # @return [Array<(Hash<String, Object>, Integer, Hash)>] Hash<String, Object> data, response status code and response headers
     def get_tag_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -539,7 +539,7 @@ module KlaviyoBetaAPI
     # Retrieve the tag group with the given ID.<br><br>*Rate limits*:<br>Burst: `3/s`<br>Steady: `60/m`  **Scopes:** `Tags Read`
     # @param id [String] 
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields_tag_group For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sparse-fieldsets
+    # @option opts [Array<String>] :fields_tag_group For more information please visit https://developers.klaviyo.com/en/v2022-11-14.pre/reference/api-overview#sparse-fieldsets
     # @return [Hash<String, Object>]
     def get_tag_group(id, opts = {})
       data, _status_code, _headers = get_tag_group_with_http_info(id, opts)
@@ -550,7 +550,7 @@ module KlaviyoBetaAPI
     # Retrieve the tag group with the given ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: &#x60;3/s&#x60;&lt;br&gt;Steady: &#x60;60/m&#x60;  **Scopes:** &#x60;Tags Read&#x60;
     # @param id [String] 
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields_tag_group For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sparse-fieldsets
+    # @option opts [Array<String>] :fields_tag_group For more information please visit https://developers.klaviyo.com/en/v2022-11-14.pre/reference/api-overview#sparse-fieldsets
     # @return [Array<(Hash<String, Object>, Integer, Hash)>] Hash<String, Object> data, response status code and response headers
     def get_tag_group_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -686,10 +686,10 @@ module KlaviyoBetaAPI
     # Get Tag Groups
     # List all tag groups in an account. Every account has one default tag group. Tag groups can be filtered by `name`, `exclusive`, and `default`, and sorted by `name` or `id` in ascending or descending order. Returns a maximum of 25 tag groups per request, which can be paginated with [cursor-based pagination](https://developers.klaviyo.com/en/v2022-10-17/reference/api_overview#pagination).<br><br>*Rate limits*:<br>Burst: `3/s`<br>Steady: `60/m`  **Scopes:** `Tags Read`
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields_tag_group For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sparse-fieldsets
     # @option opts [String] :filter For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;&#x60;name&#x60;: &#x60;contains&#x60;, &#x60;ends-with&#x60;, &#x60;equals&#x60;, &#x60;starts-with&#x60;&lt;br&gt;&#x60;exclusive&#x60;: &#x60;equals&#x60;&lt;br&gt;&#x60;default&#x60;: &#x60;equals&#x60;
     # @option opts [String] :page_cursor For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#pagination
     # @option opts [String] :sort For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sorting
+    # @option opts [Array<String>] :fields_tag_group For more information please visit https://developers.klaviyo.com/en/v2022-11-14.pre/reference/api-overview#sparse-fieldsets
     # @return [Hash<String, Object>]
     def get_tag_groups(opts = {})
       data, _status_code, _headers = get_tag_groups_with_http_info(opts)
@@ -699,32 +699,32 @@ module KlaviyoBetaAPI
     # Get Tag Groups
     # List all tag groups in an account. Every account has one default tag group. Tag groups can be filtered by &#x60;name&#x60;, &#x60;exclusive&#x60;, and &#x60;default&#x60;, and sorted by &#x60;name&#x60; or &#x60;id&#x60; in ascending or descending order. Returns a maximum of 25 tag groups per request, which can be paginated with [cursor-based pagination](https://developers.klaviyo.com/en/v2022-10-17/reference/api_overview#pagination).&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: &#x60;3/s&#x60;&lt;br&gt;Steady: &#x60;60/m&#x60;  **Scopes:** &#x60;Tags Read&#x60;
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields_tag_group For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sparse-fieldsets
     # @option opts [String] :filter For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;&#x60;name&#x60;: &#x60;contains&#x60;, &#x60;ends-with&#x60;, &#x60;equals&#x60;, &#x60;starts-with&#x60;&lt;br&gt;&#x60;exclusive&#x60;: &#x60;equals&#x60;&lt;br&gt;&#x60;default&#x60;: &#x60;equals&#x60;
     # @option opts [String] :page_cursor For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#pagination
     # @option opts [String] :sort For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sorting
+    # @option opts [Array<String>] :fields_tag_group For more information please visit https://developers.klaviyo.com/en/v2022-11-14.pre/reference/api-overview#sparse-fieldsets
     # @return [Array<(Hash<String, Object>, Integer, Hash)>] Hash<String, Object> data, response status code and response headers
     def get_tag_groups_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: TagsApi.get_tag_groups ...'
       end
-      allowable_values = ["name", "exclusive", "default"]
-      if @api_client.config.client_side_validation && opts[:'fields_tag_group'] && !opts[:'fields_tag_group'].all? { |item| allowable_values.include?(item) }
-        fail ArgumentError, "invalid value for \"fields_tag_group\", must include one of #{allowable_values}"
-      end
       allowable_values = ["id", "-id", "name", "-name"]
       if @api_client.config.client_side_validation && opts[:'sort'] && !allowable_values.include?(opts[:'sort'])
         fail ArgumentError, "invalid value for \"sort\", must be one of #{allowable_values}"
+      end
+      allowable_values = ["name", "exclusive", "default"]
+      if @api_client.config.client_side_validation && opts[:'fields_tag_group'] && !opts[:'fields_tag_group'].all? { |item| allowable_values.include?(item) }
+        fail ArgumentError, "invalid value for \"fields_tag_group\", must include one of #{allowable_values}"
       end
       # resource path
       local_var_path = '/api/tag-groups/'
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'fields[tag-group]'] = @api_client.build_collection_param(opts[:'fields_tag_group'], :csv) if !opts[:'fields_tag_group'].nil?
       query_params[:'filter'] = opts[:'filter'] if !opts[:'filter'].nil?
       query_params[:'page[cursor]'] = opts[:'page_cursor'] if !opts[:'page_cursor'].nil?
       query_params[:'sort'] = opts[:'sort'] if !opts[:'sort'].nil?
+      query_params[:'fields[tag-group]'] = @api_client.build_collection_param(opts[:'fields_tag_group'], :csv) if !opts[:'fields_tag_group'].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -841,10 +841,10 @@ module KlaviyoBetaAPI
     # Get Tags
     # List all tags in an account. Tags can be filtered by `name`, and sorted by `name` or `id` in ascending or descending order. Returns a maximum of 50 tags per request, which can be paginated with [cursor-based pagination](https://developers.klaviyo.com/en/v2022-10-17/reference/api_overview#pagination).<br><br>*Rate limits*:<br>Burst: `3/s`<br>Steady: `60/m`  **Scopes:** `Tags Read`
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields_tag For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sparse-fieldsets
     # @option opts [String] :filter For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;&#x60;name&#x60;: &#x60;contains&#x60;, &#x60;ends-with&#x60;, &#x60;equals&#x60;, &#x60;starts-with&#x60;
     # @option opts [String] :page_cursor For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#pagination
     # @option opts [String] :sort For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sorting
+    # @option opts [Array<String>] :fields_tag For more information please visit https://developers.klaviyo.com/en/v2022-11-14.pre/reference/api-overview#sparse-fieldsets
     # @return [Hash<String, Object>]
     def get_tags(opts = {})
       data, _status_code, _headers = get_tags_with_http_info(opts)
@@ -854,32 +854,32 @@ module KlaviyoBetaAPI
     # Get Tags
     # List all tags in an account. Tags can be filtered by &#x60;name&#x60;, and sorted by &#x60;name&#x60; or &#x60;id&#x60; in ascending or descending order. Returns a maximum of 50 tags per request, which can be paginated with [cursor-based pagination](https://developers.klaviyo.com/en/v2022-10-17/reference/api_overview#pagination).&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: &#x60;3/s&#x60;&lt;br&gt;Steady: &#x60;60/m&#x60;  **Scopes:** &#x60;Tags Read&#x60;
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields_tag For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sparse-fieldsets
     # @option opts [String] :filter For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;&#x60;name&#x60;: &#x60;contains&#x60;, &#x60;ends-with&#x60;, &#x60;equals&#x60;, &#x60;starts-with&#x60;
     # @option opts [String] :page_cursor For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#pagination
     # @option opts [String] :sort For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sorting
+    # @option opts [Array<String>] :fields_tag For more information please visit https://developers.klaviyo.com/en/v2022-11-14.pre/reference/api-overview#sparse-fieldsets
     # @return [Array<(Hash<String, Object>, Integer, Hash)>] Hash<String, Object> data, response status code and response headers
     def get_tags_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: TagsApi.get_tags ...'
       end
-      allowable_values = ["name"]
-      if @api_client.config.client_side_validation && opts[:'fields_tag'] && !opts[:'fields_tag'].all? { |item| allowable_values.include?(item) }
-        fail ArgumentError, "invalid value for \"fields_tag\", must include one of #{allowable_values}"
-      end
       allowable_values = ["id", "-id", "name", "-name"]
       if @api_client.config.client_side_validation && opts[:'sort'] && !allowable_values.include?(opts[:'sort'])
         fail ArgumentError, "invalid value for \"sort\", must be one of #{allowable_values}"
+      end
+      allowable_values = ["name"]
+      if @api_client.config.client_side_validation && opts[:'fields_tag'] && !opts[:'fields_tag'].all? { |item| allowable_values.include?(item) }
+        fail ArgumentError, "invalid value for \"fields_tag\", must include one of #{allowable_values}"
       end
       # resource path
       local_var_path = '/api/tags/'
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'fields[tag]'] = @api_client.build_collection_param(opts[:'fields_tag'], :csv) if !opts[:'fields_tag'].nil?
       query_params[:'filter'] = opts[:'filter'] if !opts[:'filter'].nil?
       query_params[:'page[cursor]'] = opts[:'page_cursor'] if !opts[:'page_cursor'].nil?
       query_params[:'sort'] = opts[:'sort'] if !opts[:'sort'].nil?
+      query_params[:'fields[tag]'] = @api_client.build_collection_param(opts[:'fields_tag'], :csv) if !opts[:'fields_tag'].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}

@@ -23,7 +23,7 @@ module KlaviyoBetaAPI
     # Return all tags associated with the given list ID.<br><br>*Rate limits*:<br>Burst: `3/s`<br>Steady: `60/m`  **Scopes:** `List Read` `Tags Read`
     # @param list_id [String] 
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields_tag For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sparse-fieldsets
+    # @option opts [Array<String>] :fields_tag For more information please visit https://developers.klaviyo.com/en/v2022-11-14.pre/reference/api-overview#sparse-fieldsets
     # @return [Hash<String, Object>]
     def get_list_tags(list_id, opts = {})
       data, _status_code, _headers = get_list_tags_with_http_info(list_id, opts)
@@ -34,7 +34,7 @@ module KlaviyoBetaAPI
     # Return all tags associated with the given list ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: &#x60;3/s&#x60;&lt;br&gt;Steady: &#x60;60/m&#x60;  **Scopes:** &#x60;List Read&#x60; &#x60;Tags Read&#x60;
     # @param list_id [String] 
     # @param [Hash] opts the optional parameters
-    # @option opts [Array<String>] :fields_tag For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sparse-fieldsets
+    # @option opts [Array<String>] :fields_tag For more information please visit https://developers.klaviyo.com/en/v2022-11-14.pre/reference/api-overview#sparse-fieldsets
     # @return [Array<(Hash<String, Object>, Integer, Hash)>] Hash<String, Object> data, response status code and response headers
     def get_list_tags_with_http_info(list_id, opts = {})
       if @api_client.config.debugging
