@@ -6,9 +6,6 @@ NOTE: This SDK only reflects the endpoints currently in Beta. Once endpoints are
 ### Added
 - Campaigns endpoints
 
-### Removed
-- Data Privacy (as it has been moved to General Availability)
-
 ## [1.0.1] - 2022-11-16
 ### Changes
 - Rename Privacy to DataPrivacy
