@@ -169,6 +169,16 @@ KlaviyoBetaAPI::Catalogs.create_catalog_item(body)
 ## Campaigns
 
 
+#### [Assign Campaign Message Template](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/assign_campaign_message_template)
+
+```ruby
+KlaviyoBetaAPI::Campaigns.assign_campaign_message_template(body)
+```
+
+
+
+
+
 #### [Create Campaign](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/create_campaign)
 
 ```ruby
@@ -179,20 +189,10 @@ KlaviyoBetaAPI::Campaigns.create_campaign(body)
 
 
 
-#### [Create Campaign Create Clone](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/create_campaign_create_clone)
+#### [Create Campaign Clone](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/create_campaign_clone)
 
 ```ruby
-KlaviyoBetaAPI::Campaigns.create_campaign_create_clone(body)
-```
-
-
-
-
-
-#### [Create Campaign Message Assign Template](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/create_campaign_message_assign_template)
-
-```ruby
-KlaviyoBetaAPI::Campaigns.create_campaign_message_assign_template(body)
+KlaviyoBetaAPI::Campaigns.create_campaign_clone(body)
 ```
 
 
