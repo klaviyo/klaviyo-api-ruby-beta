@@ -62,7 +62,7 @@ module KlaviyoBetaAPI
       {
         :'type' => :'String',
         :'id' => :'String',
-        :'attributes' => :'ListCreateQueryAsSubResourceAttributes'
+        :'attributes' => :'TagUpdateQueryAsSubResourceAttributes'
       }
     end
 

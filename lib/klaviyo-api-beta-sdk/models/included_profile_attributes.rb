@@ -14,14 +14,52 @@ require 'date'
 require 'time'
 
 module KlaviyoBetaAPI
-  class TemplateCloneQueryAsSubResource
-    # The ID of MessageTemplate
-    attr_accessor :id
+  class IncludedProfileAttributes
+    attr_accessor :email
+
+    attr_accessor :phone_number
+
+    attr_accessor :external_id
+
+    attr_accessor :anonymous_id
+
+    attr_accessor :first_name
+
+    attr_accessor :last_name
+
+    attr_accessor :organization
+
+    attr_accessor :title
+
+    attr_accessor :image
+
+    attr_accessor :created
+
+    attr_accessor :updated
+
+    attr_accessor :last_event_date
+
+    attr_accessor :location
+
+    attr_accessor :properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id'
+        :'email' => :'email',
+        :'phone_number' => :'phone_number',
+        :'external_id' => :'external_id',
+        :'anonymous_id' => :'anonymous_id',
+        :'first_name' => :'first_name',
+        :'last_name' => :'last_name',
+        :'organization' => :'organization',
+        :'title' => :'title',
+        :'image' => :'image',
+        :'created' => :'created',
+        :'updated' => :'updated',
+        :'last_event_date' => :'last_event_date',
+        :'location' => :'location',
+        :'properties' => :'properties'
       }
     end
 
@@ -33,14 +71,26 @@ module KlaviyoBetaAPI
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'id' => :'Object'
+        :'email' => :'String',
+        :'phone_number' => :'String',
+        :'external_id' => :'String',
+        :'anonymous_id' => :'String',
+        :'first_name' => :'String',
+        :'last_name' => :'String',
+        :'organization' => :'String',
+        :'title' => :'String',
+        :'image' => :'String',
+        :'created' => :'Time',
+        :'updated' => :'Time',
+        :'last_event_date' => :'Time',
+        :'location' => :'ProfileLocation',
+        :'properties' => :'Object'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
-        :'id'
       ])
     end
 
@@ -48,19 +98,71 @@ module KlaviyoBetaAPI
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `KlaviyoBetaAPI::TemplateCloneQueryAsSubResource` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `KlaviyoBetaAPI::IncludedProfileAttributes` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `KlaviyoBetaAPI::TemplateCloneQueryAsSubResource`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `KlaviyoBetaAPI::IncludedProfileAttributes`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.key?(:'email')
+        self.email = attributes[:'email']
+      end
+
+      if attributes.key?(:'phone_number')
+        self.phone_number = attributes[:'phone_number']
+      end
+
+      if attributes.key?(:'external_id')
+        self.external_id = attributes[:'external_id']
+      end
+
+      if attributes.key?(:'anonymous_id')
+        self.anonymous_id = attributes[:'anonymous_id']
+      end
+
+      if attributes.key?(:'first_name')
+        self.first_name = attributes[:'first_name']
+      end
+
+      if attributes.key?(:'last_name')
+        self.last_name = attributes[:'last_name']
+      end
+
+      if attributes.key?(:'organization')
+        self.organization = attributes[:'organization']
+      end
+
+      if attributes.key?(:'title')
+        self.title = attributes[:'title']
+      end
+
+      if attributes.key?(:'image')
+        self.image = attributes[:'image']
+      end
+
+      if attributes.key?(:'created')
+        self.created = attributes[:'created']
+      end
+
+      if attributes.key?(:'updated')
+        self.updated = attributes[:'updated']
+      end
+
+      if attributes.key?(:'last_event_date')
+        self.last_event_date = attributes[:'last_event_date']
+      end
+
+      if attributes.key?(:'location')
+        self.location = attributes[:'location']
+      end
+
+      if attributes.key?(:'properties')
+        self.properties = attributes[:'properties']
       end
     end
 
@@ -82,7 +184,20 @@ module KlaviyoBetaAPI
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id
+          email == o.email &&
+          phone_number == o.phone_number &&
+          external_id == o.external_id &&
+          anonymous_id == o.anonymous_id &&
+          first_name == o.first_name &&
+          last_name == o.last_name &&
+          organization == o.organization &&
+          title == o.title &&
+          image == o.image &&
+          created == o.created &&
+          updated == o.updated &&
+          last_event_date == o.last_event_date &&
+          location == o.location &&
+          properties == o.properties
     end
 
     # @see the `==` method
@@ -94,7 +209,7 @@ module KlaviyoBetaAPI
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id].hash
+      [email, phone_number, external_id, anonymous_id, first_name, last_name, organization, title, image, created, updated, last_event_date, location, properties].hash
     end
 
     # Builds the object from hash

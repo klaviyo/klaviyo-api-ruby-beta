@@ -25,6 +25,10 @@ This SDK is organized into the following resources:
 
 
 
+- DataPrivacy
+
+
+
 - Flows
 
 
@@ -255,6 +259,16 @@ KlaviyoBetaAPI::Campaigns.get_campaign_send_job(id, opts)
 
 
 
+#### [Get Campaign Tags](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/get_campaign_tags)
+
+```ruby
+KlaviyoBetaAPI::Campaigns.get_campaign_tags(campaign_id, opts)
+```
+
+
+
+
+
 #### [Get Campaigns](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/get_campaigns)
 
 ```ruby
@@ -289,6 +303,20 @@ KlaviyoBetaAPI::Campaigns.update_campaign_message(id, body)
 
 ```ruby
 KlaviyoBetaAPI::Campaigns.update_campaign_send_job(id, body)
+```
+
+
+
+
+
+
+## DataPrivacy
+
+
+#### [Request Profile Deletion](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/request_profile_deletion)
+
+```ruby
+KlaviyoBetaAPI::DataPrivacy.request_profile_deletion(body)
 ```
 
 

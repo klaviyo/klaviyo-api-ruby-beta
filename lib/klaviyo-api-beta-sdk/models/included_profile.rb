@@ -65,8 +65,8 @@ module KlaviyoBetaAPI
       {
         :'type' => :'String',
         :'id' => :'String',
-        :'attributes' => :'IncludedProfilesAttributes',
-        :'links' => :'IncludedVariantsLinks'
+        :'attributes' => :'IncludedProfileAttributes',
+        :'links' => :'IncludedTagsLinks'
       }
     end
 

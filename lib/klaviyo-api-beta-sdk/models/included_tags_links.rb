@@ -14,14 +14,13 @@ require 'date'
 require 'time'
 
 module KlaviyoBetaAPI
-  class TemplateCloneQueryAsSubResource
-    # The ID of MessageTemplate
-    attr_accessor :id
+  class IncludedTagsLinks
+    attr_accessor :_self
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id'
+        :'_self' => :'self'
       }
     end
 
@@ -33,14 +32,13 @@ module KlaviyoBetaAPI
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'id' => :'Object'
+        :'_self' => :'String'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
-        :'id'
       ])
     end
 
@@ -48,19 +46,19 @@ module KlaviyoBetaAPI
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `KlaviyoBetaAPI::TemplateCloneQueryAsSubResource` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `KlaviyoBetaAPI::IncludedTagsLinks` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `KlaviyoBetaAPI::TemplateCloneQueryAsSubResource`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `KlaviyoBetaAPI::IncludedTagsLinks`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.key?(:'_self')
+        self._self = attributes[:'_self']
       end
     end
 
@@ -68,12 +66,17 @@ module KlaviyoBetaAPI
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @_self.nil?
+        invalid_properties.push('invalid value for "_self", _self cannot be nil.')
+      end
+
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @_self.nil?
       true
     end
 
@@ -82,7 +85,7 @@ module KlaviyoBetaAPI
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id
+          _self == o._self
     end
 
     # @see the `==` method
@@ -94,7 +97,7 @@ module KlaviyoBetaAPI
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id].hash
+      [_self].hash
     end
 
     # Builds the object from hash
