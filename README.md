@@ -95,18 +95,18 @@ NOTE:
 * `max_retry` denotes number of attempts the client will make in order to execute the request successfully.
 * `max_delay` denotes total delay (in seconds) across all attempts.
 
-### To call the `get_catalog_items` operation:
+### To call the `get_campaigns` operation:
 
 ```ruby
 opts = {
-  include: ['variants'],
-  sort: 'created',
-  filter: 'equals(published,false)',
-  fields_catalog_item: ['external_id','title']
+  include: ['tags'],
+  sort: 'name',
+  filter: 'equals(archived,false)',
+  fields_campaign: ['status','audiences.included']
 }
 
 begin
-  result = KlaviyoBetaAPI::Catalogs.get_catalog_items(opts)
+  result = KlaviyoBetaAPI::Campaigns.get_campaigns(opts)
 end
 ```
 
@@ -115,9 +115,9 @@ end
 This SDK throws an `ApiException` error when the server returns a non-`2XX` response. 
 ```ruby
 begin
-  result = KlaviyoBetaAPI::Catalogs.get_catalog_items(opts)
+  result = KlaviyoBetaAPI::Campaigns.get_campaigns(opts)
 rescue KlaviyoBetaAPI::ApiError => e
-  puts "Error when calling get_catalog_items #{e}"
+  puts "Error when calling get_campaigns #{e}"
 end
 ```
 
@@ -129,37 +129,32 @@ _**NOTE:**_
 - Some args are required for the API call to succeed, the API docs above are the source of truth regarding which params are required.
 
 ## Method signatures
-- `get` operations can be passed an optional `opts` object (e.g. `get_list_profiles(opts)`).
+- `get` operations can be passed an optional `opts` object (e.g. `get_campaigns(opts)`).
 `opts` describes the available options for fetching data (some operations only support a subset of these or none).
 i.e.
 ```ruby
 opts = {
-  include: ['variants'],
-  sort: '-created',
-  filter: 'equals(published,false)',
-  page_cursor: 'page_cursor_example',
-  fields_catalog_item: ['external_id','title'],
-  fields_catalog_variant: ['external_id','title']
+  include: ['tags'],
+  sort: 'name',
+  filter: 'equals(archived,false)',
+  fields_campaign: ['status','audiences.included']
 }
 ```
-**Note, for parameters that use square brackets such as `page[cursor]` or `fields[catalog-item]` ruby will replace the square brackets `[]` with `_` underscores.
+**Note, for parameters that use square brackets such as `page[cursor]` or `fields[campaign]` ruby will replace the square brackets `[]` with `_` underscores (e.g: `page_cursor`).
 
-- For `create`, `update` & some `delete` operations (i.e. `create_catalog_item` or `update_catalog_item` or `delete_catalog_category_relationships`)
-the `body` object is required in the method signature (i.e. `create_catalog_item(body)`).
+- For `create`, `update` & some `delete` operations (i.e. `create_campaign` or `update_campaign` or `delete_campaign`)
+the `body` object is required in the method signature (i.e. `update_campaign(body)`).
 ```ruby
 body = {
   data: {
-    type: "catalog-item",
+    type: "campaign",
+    id: "YOUR_CAMPAIGN_ID
     attributes: {
-      external_id: "catalog-item-test",
-      title: "Catalog Item Test",
-      description: "this is a description",
-      url: "http://catalog-item.klaviyo.com",
-      published: true
+      name: "My New Campaign Name",
     }
   }
 }
-KlaviyoBetaAPI::Catalogs.create_catalog_item(body)
+KlaviyoBetaAPI::Campaigns.update_campaign(body)
 ```
 
 
@@ -520,5 +515,5 @@ opts = {
   debug_auth_names: []
 }
  
-response = KlaviyoBetaAPI::Catalogs.get_catalog_items(opts)
+response = KlaviyoBetaAPI::Campaigns.get_campaigns(opts)
 ```
